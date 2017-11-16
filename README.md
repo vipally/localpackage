@@ -29,6 +29,8 @@ localpackage is a projcet to test local package reference problem.
 
 	The local package reference relation is:
 	  main <- local2 <- local1
+
+[REFERENCE][problem]
 			
 ### Someone who forked my projcet
 	github.com/someone/localpackage
@@ -40,13 +42,15 @@ localpackage is a projcet to test local package reference problem.
 ## 1.  use package comment to specify root of local project in projcetroot
 	package main // import "#"
 
-[![REFERENCE]][projcect_root]
+[REFERENCE][projcect_root]
 
 	
 ## 2. use someway to reference local package 
 	import "#/local2"
 
-[![REFERENCE]][local_import]
+[REFERENCE][local_import]
+
 
 [projcect_root]: https://github.com/vipally/localpackage/blob/master/main.go#L4
 [local_import]: https://github.com/vipally/localpackage/blob/master/main.go#L24
+[problem]: https://github.com/vipally/localpackage/blob/master/main.go#L26
