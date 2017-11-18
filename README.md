@@ -1,6 +1,8 @@
 # localpackage
 localpackage is a projcet to test local package reference problem.
 
+***
+
 # THE PROBLEM
 	My project path is: github.com/vipally/localpackage
 	The local package reference relation is:
@@ -12,6 +14,8 @@ localpackage is a projcet to test local package reference problem.
 	Someone who forked this projcet as "github.com/someone/localpackage".
 	But how can his project working by avoid following change?
 	  import "github.com/SOMEONE/localpackage/local2"
+	
+***
 	
 # Examples of with/without local package reference
 	Here are two examples of "hello world" main packages:
@@ -42,13 +46,15 @@ localpackage is a projcet to test local package reference problem.
 
 	But if local-packages are referenced by "#/modules/module1" style, everything is change the name of project root only then.
 
-	How do you think about the difference between such two style of referencing local-packages then?
-	"#/modules/module1" 
+	How do you think about the difference between such styles of referencing local-packages then?
+	"#/modules/module1"
 	"<GoRoot>/server/user/project/modules/module1"
 	
 ## 1. Without local package reference
 	"<ProjectRoot>/withoutlocal" is a main package without any local package reference
 	It works well anywhere <ProjectRoot> is, even out of GoPath.
+
+[REFERENCE][withoutlocal]
 
 #### [ProjectRoot] = [GoPath]/github.com/vipally/localpackage
 	Hello World! 
@@ -66,12 +72,15 @@ localpackage is a projcet to test local package reference problem.
 	ThisPackagePath: E:/localpackage/withoutlocal
 	ReleatGopath is: ../../localpackage/withoutlocal
 
+***
 
 ## 2. With local package reference
 	"<ProjectRoot>/withoutlocal" is a hello world package with local package reference:
 	github.com/vipally/localpackage/local
 	
 	It works only when "<ProjectRoot> = <GoPath>/github.com/vipally/localpackage"
+
+[REFERENCE][withlocal]
 
 #### [ProjectRoot] = [GoPath]/github.com/vipally/localpackage
 	Hello World! 
@@ -85,6 +94,8 @@ localpackage is a projcet to test local package reference problem.
 	withlocal.go:6:2: cannot find package "github.com/vipally/localpackage/local" in any of:
 	C:\Go\src\github.com\vipally\localpackage\local (from $GOROOT)
 	E:\gocode\src\github.com\vipally\localpackage\local (from $GOPATH)
+
+***
 
 ### My project path
 	github.com/vipally/localpackage
@@ -127,3 +138,5 @@ localpackage is a projcet to test local package reference problem.
 [projcect_root]: https://github.com/vipally/localpackage/blob/master/main.go#L4
 [local_import]: https://github.com/vipally/localpackage/blob/master/main.go#L24
 [problem]: https://github.com/vipally/localpackage/blob/master/main.go#L26
+[withlocal]: https://github.com/vipally/localpackage/blob/master/withlocal/withlocal.go#L6
+[withoutlocal]: https://github.com/vipally/localpackage/blob/master/withoutlocal/withoutlocal.go#L9
