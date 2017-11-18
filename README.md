@@ -27,19 +27,19 @@ localpackage is a projcet to test local package reference problem.
 	How does go team think about this difference?
 	
 	It makes "withlocal" packages non-independent due to reference "LOCAL" packages as "GLOBAL" style.
-	If I want my package works well anywhere, I have to write all code into one "LARGE-package".
-	Just like: all.Printf/all.OpenFile/all.GOROOT
+	If I want my package works well anywhere, I have to write everything in one single "HUGE-package".
+	Just like: all.Printf/all.OpenFile/all.GOROOT/...
 	Does this go team recommended?
 	
 	We must explicit followed priorty of go dependency package find process:
 	<ProjectRoot>: with highest-priorty path to find local packages.
-	<Vendor>     : with second-priorty path to find explicit-version of local-referenced third-party packages.
+	<Vendor>     : with second-priorty path to find explicit-version of local-referenced the third-party packages.
 	<GoRoot>     : with third-priorty path to find standard packages.
 	<GoPath>     : with lowest-priorty path to find third-party packages.
 	
-	Think about that not every go-project is wrote for open-souce(aim to share with others).
-	Thousands of private go-projects(eg:gameservers) focus their own particular logic-flow only 
-	and never shared private-packages.
+	Think about that not every go-project is wrote for open-source(aim to share with others).
+	Thousands of private go-projects(eg:gameservers) focus on their own particular logic-flow only 
+	and never shared private-packages at all.
 	We just called these projects "independent-projects".
 	Because they have hundreds-of private-packages but no one is wrote for share.
 
