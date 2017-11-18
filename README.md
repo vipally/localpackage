@@ -31,7 +31,7 @@ localpackage is a projcet to test local package reference problem.
 	Just like: all.Printf/all.OpenFile/all.GOROOT
 	Does this go team recommended?
 	
-	We must explicit followed priorty of go package dependency management process:
+	We must explicit followed priorty of go package find process:
 	<ProjectRoot>: with highest-priorty path to find local packages.
 	<Vendor>     : with second-priorty path to find explicit-version of local-referenced third-party packages.
 	<GoRoot>     : with third-priorty path to find standard packages.
@@ -40,15 +40,21 @@ localpackage is a projcet to test local package reference problem.
 	Think about that not every go-project is wrote for open-souce(aim to share with others).
 	Thousands of private go-projects(eg:gameservers) focus their own particular logic-flow only and never shared private-packages.
 	We just called these projects "independent-projects".Because they have hundreds-of private-packages but no one is wrote for share.
+
+	That is to say, they never care "where I am", but "what I need".
+
 	Unfortunately, these kind of projects is always "huge".Maybe millions-of lines or thousands-of private-packages reference inside?
+
 	In this case, change project name or source control server become heavy work, 
-	because the working path changes and thousands-of private-packages reference have to be update.
+	because the working path changes and thousands-of private-packages reference code have to be update.
 
 	But if local-packages are referenced by "#/modules/module1" style, everything is change the name of project root only then.
 
 	How do you think about the difference between such styles of referencing local-packages then?
 	"#/modules/module1"
 	"<GoRoot>/server/user/project/modules/module1"
+
+[REFERENCE][examples]
 	
 ## 1. Without local package reference
 	"<ProjectRoot>/withoutlocal" is a main package without any local package reference
@@ -140,3 +146,4 @@ localpackage is a projcet to test local package reference problem.
 [problem]: https://github.com/vipally/localpackage/blob/master/main.go#L26
 [withlocal]: https://github.com/vipally/localpackage/blob/master/withlocal/withlocal.go#L6
 [withoutlocal]: https://github.com/vipally/localpackage/blob/master/withoutlocal/withoutlocal.go#L9
+[examples]: https://github.com/vipally/localpackage#examples-of-withwithout-local-package-reference
