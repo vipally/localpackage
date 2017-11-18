@@ -38,17 +38,21 @@ localpackage is a projcet to test local package reference problem.
 	<GoPath>     : with lowest-priorty path to find third-party packages.
 	
 	Think about that not every go-project is wrote for open-souce(aim to share with others).
-	Thousands of private go-projects(eg:gameservers) focus their own particular logic-flow only and never shared private-packages.
-	We just called these projects "independent-projects".Because they have hundreds-of private-packages but no one is wrote for share.
+	Thousands of private go-projects(eg:gameservers) focus their own particular logic-flow only 
+	and never shared private-packages.
+	We just called these projects "independent-projects".
+	Because they have hundreds-of private-packages but no one is wrote for share.
 
 	That is to say, they never care "where I am", but "what I need".
 
-	Unfortunately, these kind of projects is always "huge".Maybe millions-of lines or thousands-of private-packages reference inside?
+	Unfortunately, these kind of projects are always "huge". 
+	Maybe millions-of lines or thousands-of private-packages reference inside?
 
 	In this case, change project name or source control server become heavy work, 
 	because the working path changes and thousands-of private-packages reference code have to be update.
 
-	But if local-packages are referenced by "#/modules/module1" style, everything is change the name of project root only then.
+	But if local-packages are referenced by "#/modules/module1" style, 
+	everything is change the name of project root only then.
 
 	How do you think about the difference between such styles of referencing local-packages then?
 	"#/modules/module1"
