@@ -6,8 +6,8 @@ import (
 	"github.com/vipally/localpackage/local"
 )
 
-// Without local package import.
-// It works only in <Gopath>/github.com/vipally/localpackage/local.
+// With local package import.
+// It works only when <ProjectRoot> = <Gopath>/github.com/vipally/localpackage.
 func main() {
 	fmt.Println("Hello World! \nWITH local import:", local.GetReleatGopath(local.GetThisFilepath(1)))
 
