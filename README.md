@@ -38,7 +38,7 @@ localpackage is a projcet to test local package reference problem.
 	<GoPath>     : with lowest-priorty path to find third-party packages.
 	
 	Think about that not every go-project is wrote for open-source(aim to share with others).
-	Thousands of private go-projects(eg:gameservers) focus on their own particular logic-flow only 
+	Thousands of private go-projects(eg:game-servers) focus on their own particular logic-flow only 
 	and never shared private-packages at all.
 	We just called these projects "independent-projects".
 	Because they have hundreds-of private-packages but no one is wrote for share.
