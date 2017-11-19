@@ -6,10 +6,10 @@ import (
 
 import (
 	"fmt"
-	"#/public2"
+	"#/public1"
 )
 
 func PackageMain() {
-	fmt.Println("local2 import [#/public2]")
-	public2.PackageMain()
+	fmt.Println("local2 import [#/public1]")
+	public1.PackageMain()
 }
