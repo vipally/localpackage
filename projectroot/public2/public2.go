@@ -7,6 +7,6 @@ import (
 )
 
 func PackageMain() {
-	fmt.Println("public2 import github.com/vipally/localpackage/lprojectroot/public1")
+	fmt.Println("public2 import [github.com/vipally/localpackage/lprojectroot/public1]")
 	public1.PackageMain()
 }
