@@ -14,6 +14,8 @@ localpackage is a projcet to test local package reference problem.
 	Someone who forked this projcet as "github.com/someone/localpackage".
 	But how can his project working by avoid following change?
 	  import "github.com/SOMEONE/localpackage/local2"
+
+[REFERENCE][gonuts]
 	
 ***
 	
@@ -151,3 +153,4 @@ localpackage is a projcet to test local package reference problem.
 [withlocal]: https://github.com/vipally/localpackage/blob/master/withlocal/withlocal.go#L6
 [withoutlocal]: https://github.com/vipally/localpackage/blob/master/withoutlocal/withoutlocal.go#L9
 [examples]: https://github.com/vipally/localpackage#examples-of-withwithout-local-package-reference
+[gonuts]: https://groups.google.com/forum/#!topic/golang-nuts/ewyUOFyFIJU
