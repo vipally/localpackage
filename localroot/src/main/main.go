@@ -1,6 +1,7 @@
-package main
+package main //import "#"
 
 import (
+	//error: import local package by global style
 	//"github.com/vipally/localpackage/projectroot/src/locals/local1/local"
 	"#/locals/local1/local"
 	"#/locals/local2"
@@ -14,10 +15,8 @@ func main() {
 	fmt.Printf("ThisPackagePath: %s\n", local.GetThisFilepath(2))
 	fmt.Printf("ReleatGopath is: %s\n", local.GetReleatGopath(thisFilePath))
 
-	fmt.Println("*************************")
+	fmt.Println("*****************************")
 	fmt.Println("main import [#/locals/local2]")
 	local2.PackageMain()
-	//	fmt.Println("local2 import [github.com/vipally/localpackage/lprojectroot/public2]")
-	//	public2.PackageMain()
-	fmt.Println("*************************")
+	fmt.Println("*****************************")
 }
