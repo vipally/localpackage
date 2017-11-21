@@ -1,8 +1,5 @@
 package local1
 
-import (
-	"fmt"
-)
 
 import (
 	"fmt"
@@ -10,6 +7,6 @@ import (
 )
 
 func PackageMain() {
-	fmt.Println("local2 import [#/public1]")
+	fmt.Println("local1 import [#/public1]")
 	public1.PackageMain()
 }
