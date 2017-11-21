@@ -15,8 +15,8 @@ func main() {
 	fmt.Printf("ThisPackagePath: %s\n", local.GetThisFilepath(2))
 	fmt.Printf("ReleatGopath is: %s\n", local.GetReleatGopath(thisFilePath))
 
-	fmt.Println("*****************************")
+	fmt.Println("***********************************")
 	fmt.Println("main import [#/locals/local2]")
 	local2.PackageMain()
-	fmt.Println("*****************************")
+	fmt.Println("***********************************")
 }
