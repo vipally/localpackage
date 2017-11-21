@@ -1,4 +1,6 @@
-package local
+// import "#" declare this is a local package.
+// Though it doesnt have "#/foo" style imports.
+package local //import "#"
 
 import (
 	"go/build"
@@ -27,18 +29,18 @@ func formatPath(s string) string {
 }
 
 func GetProjectRootpath(depth int) string {
-	return formatPath(build.Default.SearchLocalRoot(filepath.Dir(GetThisFilepath(depth))))
+	return build.Default.SearchLocalRoot(filepath.Dir(GetThisFilepath(depth)))
 }
 
 func GetThisFilepath(depth int) string {
 	thisFile, _ := FileLine(depth)
 	thisFileath := filepath.Dir(thisFile)
-	return formatPath(thisFileath)
+	return thisFileath
 }
 
 func GetReleatGopath(s string) string {
 	ss, _ := filepath.Rel(GetGopath(), s)
-	return formatPath(ss)
+	return ss
 }
 
 //the caller's file/line info

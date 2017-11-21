@@ -1,9 +1,9 @@
 package main
 
 import (
-	//"github.com/vipally/localpackage/lprojectroot/public2"
-	"#/local2"
-	"#/local1/local"
+	//"github.com/vipally/localpackage/projectroot/src/locals/local1/local"
+	"#/locals/local1/local"
+	"#/locals/local2"
 	"fmt"
 )
 
@@ -14,10 +14,10 @@ func main() {
 	fmt.Printf("ThisPackagePath: %s\n", local.GetThisFilepath(2))
 	fmt.Printf("ReleatGopath is: %s\n", local.GetReleatGopath(thisFilePath))
 
-	fmt.Println("\n*************************")
-	fmt.Println("main import [#/local2]")
+	fmt.Println("*************************")
+	fmt.Println("main import [#/locals/local2]")
 	local2.PackageMain()
-//	fmt.Println("local2 import [github.com/vipally/localpackage/lprojectroot/public2]")
-//	public2.PackageMain()
+	//	fmt.Println("local2 import [github.com/vipally/localpackage/lprojectroot/public2]")
+	//	public2.PackageMain()
 	fmt.Println("*************************")
 }
