@@ -19,4 +19,5 @@ func main() {
 	local2.PackageMain()
 //	fmt.Println("local2 import [github.com/vipally/localpackage/lprojectroot/public2]")
 //	public2.PackageMain()
+	fmt.Println("*************************")
 }
