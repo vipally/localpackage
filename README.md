@@ -145,8 +145,8 @@ localpackage is a projcet to test local package reference problem.
 
 
 [problem]: https://github.com/vipally/localpackage/blob/master/main.go#L26
-[withlocal]: https://github.com/vipally/localpackage/blob/master/withlocal/withlocal.go#L6
-[withoutlocal]: https://github.com/vipally/localpackage/blob/master/withoutlocal/withoutlocal.go#L9
+[withlocal]: https://github.com/vipally/localpackage/blob/master/problem/withlocal/withlocal.go#L6
+[withoutlocal]: https://github.com/vipally/localpackage/blob/master/problem/withoutlocal/withoutlocal.go#L9
 [examples]: https://github.com/vipally/localpackage#examples-of-withwithout-local-package-reference
 [gonuts]: https://groups.google.com/forum/#!topic/golang-nuts/ewyUOFyFIJU
 [my_solution]: https://github.com/vipally/localpackage/tree/master/localroot/src#manage-private-only-projects-by-replacing-gopath-with-localroot
