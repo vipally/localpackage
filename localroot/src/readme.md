@@ -1,7 +1,7 @@
 # localroot
 	This is a test of localroot refer local-only packages with [import "#/foo"] style.
 
-# Manage private-only projects by replacing GoPath with LocalRoot.
+# Manage private-only golang-projects by replacing GoPath with LocalRoot.
 	
 - Content
 	- [The problem](https://github.com/vipally/localpackage/tree/master/localroot/src#the-problem-refer)
@@ -69,8 +69,8 @@
 		    │  └─...
 		    └─...
 
-## My test project. [Code](https://github.com/vipally/localpackage/tree/master/localroot/src)
-	It works well wherever LocalRoot, even out of GoPath.
+## My test project. [Code](https://github.com/vipally/localpackage/blob/master/localroot/src/main/main.go#L1)
+	As my expectation, it works well wherever LocalRoot, even out of GoPath is.
 	Actually, a LocalRoot is a private GoPath that is accessible by sub-packages only.
 
 	If a private project use local and vendor third-party packages only,
