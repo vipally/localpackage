@@ -5,5 +5,5 @@ import (
 )
 
 func PackageMain() {
-	fmt.Println("public1(import noting)")
+	fmt.Println("public1 import noting")
 }

@@ -6,6 +6,6 @@ import (
 )
 
 func PackageMain() {
-	fmt.Println("local2 import [#/locals/local1]")
+	fmt.Println("local2  import [#/locals/local1]")
 	local1.PackageMain()
 }

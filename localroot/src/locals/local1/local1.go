@@ -7,6 +7,6 @@ import (
 )
 
 func PackageMain() {
-	fmt.Println("local1 import [#/publics/public1]")
+	fmt.Println("local1  import [#/publics/public1]")
 	public1.PackageMain()
 }

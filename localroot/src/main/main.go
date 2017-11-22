@@ -17,9 +17,9 @@ func main() {
 	fmt.Printf("ReleatGopath is: %s\n", local.GetReleatGopath(thisFilePath))
 
 	fmt.Println("**********************************************************")
-	fmt.Println("main import [#/locals/local2]")
+	fmt.Println("main    import [#/locals/local2]")
 	local2.PackageMain()
-	fmt.Printf("main import [golang.org/x/debug/macho(local vendor)]: \n%v\n",
+	fmt.Printf("main    import [golang.org/x/debug/macho(local vendor)]: \n%v\n",
 		macho.CpuAmd64.GoString())
 	fmt.Println("**********************************************************")
 }
