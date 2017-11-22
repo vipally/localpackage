@@ -17,8 +17,7 @@
 		- [2. LocalRoot out of GoPath](https://github.com/vipally/localpackage/tree/master/localroot/src#2-localroot-out-of-gopath)
 		- [3. The local working tree](https://github.com/vipally/localpackage/tree/master/localroot/src#3-the-local-working-tree)
 
-## The problem. 
-	[Refer](https://github.com/vipally/localpackage#the-problem)
+## The problem. [Refer](https://github.com/vipally/localpackage#the-problem)
 	
 ## The Go patch. [Code](https://github.com/vipally/go)
 	I have made a patch of Golang to support [import "#/foo"] style reference.
