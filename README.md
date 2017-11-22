@@ -110,31 +110,6 @@ localpackage is a projcet to test local package reference problem.
 
 ***
 
-### My project path
-	github.com/vipally/localpackage
-
-### This is the working tree of this project
-	github.com/vipally/localpackage/
-	│
-	│  main.go
-	│
-	├─local1
-	│      local1.go
-	│
-	└─local2
-	       local2.go
-
-	The local package reference relation is:
-	  main <- local2 <- local1
-
-[REFERENCE][problem]
-			
-### Someone who forked my projcet
-	github.com/someone/localpackage
-
-	But how can his project working by avoid follow change?
-	  import "github.com/someone/localpackage/local2"
-		
 # Maybe one solution [Reference][my_solution]
 ## 1.  use package comment to specify root of local project in projcetroot
 	package main // import "#"
@@ -144,7 +119,6 @@ localpackage is a projcet to test local package reference problem.
 	import "#/local2"
 
 
-[problem]: https://github.com/vipally/localpackage/blob/master/main.go#L26
 [withlocal]: https://github.com/vipally/localpackage/blob/master/problem/withlocal/withlocal.go#L6
 [withoutlocal]: https://github.com/vipally/localpackage/blob/master/problem/withoutlocal/withoutlocal.go#L9
 [examples]: https://github.com/vipally/localpackage#examples-of-withwithout-local-package-reference
