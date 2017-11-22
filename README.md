@@ -22,8 +22,8 @@ localpackage is a projcet to test local package reference problem.
 	
 # Examples of with/without local package reference
 	Here are two examples of "hello world" main packages:
-	<ProjectRoot>/withoutlocal
-	<ProjectRoot>/withlocal <- github.com/vipally/localpackage/local
+	<ProjectRoot>/problem/withoutlocal
+	<ProjectRoot>/problem/withlocal <- github.com/vipally/localpackage/problem/local
 
 	"withoutlocal" works well anywhere <ProjectRoot> is, even out of GoPath.
 	"withlocal" works only when "<ProjectRoot> = <GoPath>/github.com/vipally/localpackage"
@@ -64,7 +64,7 @@ localpackage is a projcet to test local package reference problem.
 [REFERENCE][examples]
 	
 ## 1. Without local package reference
-	"<ProjectRoot>/withoutlocal" is a main package without any local package reference
+	"<ProjectRoot>/problem/withoutlocal" is a main package without any local package reference
 	It works well anywhere <ProjectRoot> is, even out of GoPath.
 
 [REFERENCE][withoutlocal]
@@ -74,16 +74,16 @@ localpackage is a projcet to test local package reference problem.
 	WITHOUT local import
 	Gopath is      : E:/gocode/src
 	ProjectRoot is : E:/gocode/src/github.com/vipally/localpackage
-	ThisPackagePath: E:/gocode/src/github.com/vipally/localpackage/withoutlocal
-	ReleatGopath is: github.com/vipally/localpackage/withoutlocal
+	ThisPackagePath: E:/gocode/src/github.com/vipally/localpackage/problem/withoutlocal
+	ReleatGopath is: github.com/vipally/localpackage/problem/withoutlocal
 
 #### [ProjectRoot] = [GoPath]/../../localpackage
 	Hello World! 
 	WITHOUT local import
 	Gopath is      : E:/gocode/src
 	ProjectRoot is : E:/localpackage
-	ThisPackagePath: E:/localpackage/withoutlocal
-	ReleatGopath is: ../../localpackage/withoutlocal
+	ThisPackagePath: E:/localpackage/problem/withoutlocal
+	ReleatGopath is: ../../localpackage/problem/withoutlocal
 
 ***
 
@@ -100,13 +100,13 @@ localpackage is a projcet to test local package reference problem.
 	WITH local import: github.com/vipally/localpackage/local
 	Gopath is      : E:/gocode/src
 	ProjectRoot is : E:/gocode/src/github.com/vipally/localpackage
-	ThisPackagePath: E:/gocode/src/github.com/vipally/localpackage/withlocal
-	ReleatGopath is: github.com/vipally/localpackage/withlocal
+	ThisPackagePath: E:/gocode/src/github.com/vipally/localpackage/problem/withlocal
+	ReleatGopath is: github.com/vipally/localpackage/problem/withlocal
 
 #### [ProjectRoot] = [GoPath]/../../localpackage
-	withlocal.go:6:2: cannot find package "github.com/vipally/localpackage/local" in any of:
-	C:\Go\src\github.com\vipally\localpackage\local (from $GOROOT)
-	E:\gocode\src\github.com\vipally\localpackage\local (from $GOPATH)
+	withlocal.go:6:2: cannot find package "github.com/vipally/localpackage/problem/local" in any of:
+	C:\Go\src\github.com\vipally\localpackage\problem\local (from $GOROOT)
+	E:\gocode\src\github.com\vipally\localpackage\problem\local (from $GOPATH)
 
 ***
 
