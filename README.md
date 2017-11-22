@@ -59,7 +59,7 @@ localpackage is a projcet to test local package reference problem.
 
 	How do you think about the difference between such styles of referencing local-packages then?
 	"#/modules/module1"
-	"<GoRoot>/server/user/project/modules/module1"
+	(<GoPath>/) "server/user/project/modules/module1"
 
 [REFERENCE][examples]
 	
