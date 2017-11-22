@@ -18,7 +18,7 @@ func GetGopath() string {
 	if gGoPath == "" {
 		s := os.Getenv("GOPATH")
 		if ss := strings.Split(s, ";"); ss != nil && len(ss) > 0 {
-			gGoPath = filepath.Join(ss[0], "src")
+			gGoPath = filepath.Clean(ss[0] + "/src")
 		}
 	}
 	return gGoPath
