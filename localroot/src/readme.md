@@ -23,9 +23,11 @@
 	ProjectRoot is : E:\localpackage\localroot
 	ThisPackagePath: E:\localpackage\localroot\src\main
 	ReleatGopath is: ..\..\localpackage\localroot\src\main
-	***********************************
+	**********************************************************
 	main import [#/locals/local2]
 	local2 import [#/locals/local1]
 	local1 import [#/publics/public1]
 	public1(import noting)
-	***********************************
+	main import [golang.org/x/debug/macho(local vendor)]: 
+	macho.CpuAmd64
+	**********************************************************
