@@ -39,7 +39,7 @@
 ## How to refer local-only packages? [Code](https://github.com/vipally/localpackage/blob/master/localroot/src/main/main.go#L6)
 	With [import "#/x/y/z"] style.
 	
-	This style of import tells the compiler that it is a related package path based on LocalRoot, and never search GoPath.
+	This style of import tells the compiler that it is a local package related to LocalRoot, and never search GoPath.
 	And it will be expanded as [import "x/y/z"] by compiler automatically related to LocalRoot but not GoPath.
 	
 ## What is LocalRoot? [Code](https://github.com/vipally/go/blob/master/src/go/build/build.go#L393)
