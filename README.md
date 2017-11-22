@@ -3,21 +3,22 @@ localpackage is a projcet to test local package reference problem.
 
 ***
 
-# THE PROBLEM
-	My project path is: github.com/vipally/localpackage
+# THE PROBLEM [The Discussion][gonuts]
+	My project path is: github.com/vipally/localpackage/problem/withlocal
 	The local package reference relation is:
-	  main <- local2 <- local1
+	  withlocal <- withlocal/local
 
-	In "main.go" use such to reference local package local2:
-	  import "github.com/VIPALLY/localpackage/local2"
+	In "main" use such to reference local package local:
+	  import "github.com/VIPALLY/localpackage/problem/withlocal/local"
 	
 	Someone who forked this projcet as "github.com/someone/localpackage".
 	But how can his project working by avoid following change?
-	  import "github.com/SOMEONE/localpackage/local2"
+	  import "import "github.com/SOMEONE/localpackage/problem/withlocal/local"
 
-[REFERENCE][gonuts]
-	
 ***
+
+# My Solution [Reference][my_solution]
+	Use [import "#/x/y/z"] local-reference style to related to LocalRoot instead of GoPath.
 	
 # Examples of with/without local package reference
 	Here are two examples of "hello world" main packages:
@@ -134,23 +135,18 @@ localpackage is a projcet to test local package reference problem.
 	But how can his project working by avoid follow change?
 	  import "github.com/someone/localpackage/local2"
 		
-# Maybe one solution
+# Maybe one solution [Reference][my_solution]
 ## 1.  use package comment to specify root of local project in projcetroot
 	package main // import "#"
 
-[REFERENCE][projcect_root]
 
-	
 ## 2. use someway to reference local package 
 	import "#/local2"
 
-[REFERENCE][local_import]
 
-
-[projcect_root]: https://github.com/vipally/localpackage/blob/master/main.go#L4
-[local_import]: https://github.com/vipally/localpackage/blob/master/main.go#L24
 [problem]: https://github.com/vipally/localpackage/blob/master/main.go#L26
 [withlocal]: https://github.com/vipally/localpackage/blob/master/withlocal/withlocal.go#L6
 [withoutlocal]: https://github.com/vipally/localpackage/blob/master/withoutlocal/withoutlocal.go#L9
 [examples]: https://github.com/vipally/localpackage#examples-of-withwithout-local-package-reference
 [gonuts]: https://groups.google.com/forum/#!topic/golang-nuts/ewyUOFyFIJU
+[my_solution]: https://github.com/vipally/localpackage/tree/master/localroot/src#manage-private-only-projects-by-replacing-gopath-with-localroot
