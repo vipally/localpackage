@@ -6,7 +6,7 @@ import (
 	"#/locals/local1/local"
 	"#/locals/local2"
 	"fmt"
-	"golang.org/x/debug"
+	"golang.org/x/debug/macho"
 )
 
 func main() {
@@ -18,7 +18,8 @@ func main() {
 
 	fmt.Println("***********************************")
 	fmt.Println("main import [#/locals/local2]")
-	fmt.Printf("main import [golang.org/x/debug]: \n%v\n", debug.GoroutineStatus())
+	local2.PackageMain()
+	fmt.Printf("main import [golang.org/x/debug/macho]: %v\n", macho.Cpu(1).String())
 	fmt.Println("***********************************")
 	
 }
