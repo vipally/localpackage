@@ -32,11 +32,13 @@
 	import "#/locals/local1"
 
 ## How to compatible with current global import style? [Code](https://github.com/vipally/localpackage/blob/master/localroot/src/witherrors/main.go#L4) 
-	Local packages cannot referd by global style.(no matter from local and global packages)
-	Global style import is with none limit in local packages.
+	Local packages cannot refered by global style(no matter by local and global packages).
+	Global style import is with none limitation in local packages.
+	Source tree that cannot find a pattern of "<root>/src/vendor/" sub-tree cannot use local import style.
 	
 ## How to refer local-only packages? [Code](https://github.com/vipally/localpackage/blob/master/localroot/src/main/main.go#L6)
 	With [import "#/x/y/z"] style.
+	
 	This style of import tells the compiler that it is a related package path based on LocalRoot, and never search GoPath.
 	And it will be expanded as [import "x/y/z"] by compiler automatically related to LocalRoot but not GoPath.
 	
