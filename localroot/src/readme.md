@@ -4,7 +4,7 @@
 # Manage private-only projects by replacing GoPath with LocalRoot.
 	
 - Content
-	- [The problem]()
+	- [The problem](https://github.com/vipally/localpackage/tree/master/localroot/src#the-problem)
 	- [The Go patch](https://github.com/vipally/localpackage/tree/master/localroot/src#the-go-patch-code)
 	- [What is a local-only package?](https://github.com/vipally/localpackage/tree/master/localroot/src#what-is-a-local-only-package)
 		- [1.With package comment [import "#"]](https://github.com/vipally/localpackage/tree/master/localroot/src#1with-package-comment-import--code)
@@ -16,9 +16,6 @@
 		- [1. LocalRoot under GoPath](https://github.com/vipally/localpackage/tree/master/localroot/src#1-localroot-under-gopath)
 		- [2. LocalRoot out of GoPath](https://github.com/vipally/localpackage/tree/master/localroot/src#2-localroot-out-of-gopath)
 		- [3. The local working tree](https://github.com/vipally/localpackage/tree/master/localroot/src#3-the-local-working-tree)
-
-	
-
 
 ## The problem. 
 	[Refer](https://github.com/vipally/localpackage#the-problem)
