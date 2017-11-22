@@ -19,7 +19,6 @@ func main() {
 	fmt.Println("***********************************")
 	fmt.Println("main import [#/locals/local2]")
 	local2.PackageMain()
-	fmt.Printf("main import [golang.org/x/debug/macho]: %v\n", macho.Cpu(1).String())
+	fmt.Printf("main import [golang.org/x/debug/macho]: %v\n", macho.CpuAmd64.GoString())
 	fmt.Println("***********************************")
-	
 }
