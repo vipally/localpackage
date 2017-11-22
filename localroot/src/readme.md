@@ -1,20 +1,27 @@
 # localroot
 	This is a test of localroot refer local-only packages with [import "#/foo"] style.
+
+# Manage private-only projects by replacing GoPath with LocalRoot.
 	
 - Content
-	- [The Go patch]()
-	- [What is a local-only package?]()
-		- [1.With package comment [import "#"]]()
-		- [2.With any import with [import "#/xxx"] style]()
-	- [How to refer local-only packages]()
-	- [What is LocalRoot?]()
-	- [My test project. ]()
-		- [1. LocalRoot under GoPath]()
-		- [2. LocalRoot out of GoPath]()
-		- [3. The local working tree]()
+	- [The problem]()
+	- [The Go patch](https://github.com/vipally/localpackage/tree/master/localroot/src#the-go-patch-code)
+	- [What is a local-only package?](https://github.com/vipally/localpackage/tree/master/localroot/src#what-is-a-local-only-package)
+		- [1.With package comment [import "#"]](https://github.com/vipally/localpackage/tree/master/localroot/src#1with-package-comment-import--code)
+		- [2.With any import with [import "#/xxx"] style](https://github.com/vipally/localpackage/tree/master/localroot/src#2with-any-import-with-import-foo-style--code)
+	- [How to compatible with current global import style?](https://github.com/vipally/localpackage/tree/master/localroot/src#how-to-compatible-with-current-global-import-style-code)
+	- [How to refer local-only packages](https://github.com/vipally/localpackage/tree/master/localroot/src#how-to-refer-local-only-packages-code)
+	- [What is LocalRoot?](https://github.com/vipally/localpackage/tree/master/localroot/src#what-is-localroot-code)
+	- [My test project. ](https://github.com/vipally/localpackage/tree/master/localroot/src#my-test-project)
+		- [1. LocalRoot under GoPath](https://github.com/vipally/localpackage/tree/master/localroot/src#1-localroot-under-gopath)
+		- [2. LocalRoot out of GoPath](https://github.com/vipally/localpackage/tree/master/localroot/src#2-localroot-out-of-gopath)
+		- [3. The local working tree](https://github.com/vipally/localpackage/tree/master/localroot/src#3-the-local-working-tree)
 
 	
-# Manage private-only projects by replacing GoPath with LocalRoot.
+
+
+## The problem. 
+	[Refer](https://github.com/vipally/localpackage#the-problem)
 	
 ## The Go patch. [Code](https://github.com/vipally/go)
 	I have made a patch of Golang to support [import "#/foo"] style reference.
@@ -66,7 +73,13 @@
 		    │  └─...
 		    └─...
 
-## My test project. 
+## My test project. [Code](https://github.com/vipally/localpackage/tree/master/localroot/src)
+	It works well wherever LocalRoot, even out of GoPath.
+	Actually, a LocalRoot is a private GoPath that is accessible by sub-packages only.
+
+	If a private project use local and vendor third-party packages only,
+	it will have nothing to do with GoPath.
+
 ### 1. LocalRoot under GoPath
 	Gopath is      : E:\gocode\src
 	ProjectRoot is : E:\gocode\src\github.com\vipally\localpackage\localroot
