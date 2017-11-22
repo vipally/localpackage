@@ -70,7 +70,7 @@
 		    └─...
 
 ## My test project. [Code](https://github.com/vipally/localpackage/blob/master/localroot/src/main/main.go#L1)
-	As my expectation, it works well wherever LocalRoot, even out of GoPath is.
+	As my expectation, it works well wherever LocalRoot is, even out of GoPath.
 	Actually, a LocalRoot is a private GoPath that is accessible by sub-packages only.
 
 	If a private project use local and vendor third-party packages only,
