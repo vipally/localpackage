@@ -47,7 +47,7 @@
 	LocalRoot is a <root> directory that contains such patten of sub-tree "<root>/src/vendor/" up from current path.
 	A LocalRoot has the same tree structure with GoPath and GoRoot.
 
-	Actually, a LocalRoot is a private GoPath that is accessible by sub-packages only.
+	Actually, a LocalRoot is a private GoPath that is accessible to sub-packages only.
 
 	This is the minimal state of a valid LocalRoot:
 		LocalRoot
@@ -73,7 +73,7 @@
 
 ## My test project. [Code](https://github.com/vipally/localpackage/blob/master/localroot/src/main/main.go#L1)
 	As my expectation, it works well wherever LocalRoot is, even out of GoPath.
-	Actually, a LocalRoot is a private GoPath that is accessible by sub-packages only.
+	Actually, a LocalRoot is a private GoPath that is accessible to sub-packages only.
 
 	If a private project use local and vendor third-party packages only,
 	it will have nothing to do with GoPath.
@@ -109,7 +109,7 @@
 ### 3. The local working tree
 	This is the tree of LocalRoot after build/install.
 	
-	Actually, a LocalRoot is a private GoPath that is accessible by sub-packages only.
+	Actually, a LocalRoot is a private GoPath that is accessible to sub-packages only.
 
 	LocalRoot
 	│
