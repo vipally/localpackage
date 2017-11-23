@@ -2,7 +2,7 @@ package main //import "#"
 
 import (
 	//error: import local package by global style
-	//"github.com/vipally/localpackage/projectroot/src/locals/local1/local"
+	//"github.com/vipally/localpackage/localroot/src/locals/local1/local"
 	"#/locals/local1/local"
 	"#/locals/local2"
 	"fmt"
