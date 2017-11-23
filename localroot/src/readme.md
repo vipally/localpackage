@@ -6,6 +6,7 @@
 - Content
 	- [The problem](https://github.com/vipally/localpackage/tree/master/localroot/src#the-problem-refer)
 	- [The Go patch](https://github.com/vipally/localpackage/tree/master/localroot/src#the-go-patch-code)
+	- [My solution]()
 	- [What is a local-only package?](https://github.com/vipally/localpackage/tree/master/localroot/src#what-is-a-local-only-package)
 		- [1.With package comment [import "#"]](https://github.com/vipally/localpackage/tree/master/localroot/src#1with-package-comment-import--code)
 		- [2.With any import with [import "#/xxx"] style](https://github.com/vipally/localpackage/tree/master/localroot/src#2with-any-import-with-import-foo-style--code)
@@ -18,10 +19,45 @@
 		- [3. The local working tree](https://github.com/vipally/localpackage/tree/master/localroot/src#3-the-local-working-tree)
 
 ## The problem. [Refer](https://github.com/vipally/localpackage#the-problem)
-	
+
 ## The Go patch. [Code](https://github.com/vipally/go) [TestCode](https://github.com/vipally/localpackage/tree/master/localroot/src)
 	I have made a patch of Golang to support [import "#/foo"] style reference.
 	https://github.com/vipally/go
+
+## My solution
+### 1.  use such way to define a LocalRoot to replacing GoPath/GoRoot [Examle](https://github.com/vipally/localpackage/tree/master/localroot/src)
+	LocalRoot is a <root> directory that contains such patten of sub-tree "<root>/src/vendor/" up from current path.
+	A LocalRoot has the same tree structure with GoPath and GoRoot.
+
+	Actually, a LocalRoot is a private GoPath that is accessible to sub-packages only.
+
+	This is the minimal state of a valid LocalRoot:
+		LocalRoot
+		│
+		└─src
+		    ├─vendor
+		    │  ...
+		    └─...
+
+	After build and install, it may become as:
+		LocalRoot
+		│  
+		├─bin
+		│    ...
+		├─pkg
+		│  └─windows_amd64
+		│      └─...
+		└─src
+		    │  ...     
+		    ├─vendor
+		    │  └─...
+		    └─...
+
+
+### 2. use [import "#/x/y/z"] style to refer local package [Code](https://github.com/vipally/localpackage/blob/master/localroot/src/locals/local2/local2.go#L5)
+	import "#/x/y/z"
+	
+	Which means [import "x/y/z"] from LocalRoot, and never search from GoPath/GoRoot.
 	
 ## What is a local-only package?
 ### 1.With package comment [import "#"] [Code](https://github.com/vipally/localpackage/blob/master/localroot/src/locals/local1/local/local.go#L3)
@@ -39,8 +75,10 @@
 ## How to refer local-only packages? [Code](https://github.com/vipally/localpackage/blob/master/localroot/src/main/main.go#L6)
 	With [import "#/x/y/z"] style.
 	
-	This style of import tells the compiler that it is a local package related to LocalRoot, and never search GoPath.
-	And it will be expanded as [import "x/y/z"] by compiler automatically related to LocalRoot but not GoPath.
+	Which means [import "x/y/z"] from LocalRoot, and never search from GoPath/GoRoot.
+	This style of import tells the compiler that it is a local package related to LocalRoot, 
+	and never search from GoPath/GoRoot.
+	It will be expanded as [import "x/y/z"] by compiler automatically related to LocalRoot but not GoPath/GoRoot.
 	
 ## What is LocalRoot? [Code](https://github.com/vipally/go/blob/master/src/go/build/build.go#L397)
 	LocalRoot is the root of a local-only project to replace "#" in [import "#/xxx"] style.

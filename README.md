@@ -111,12 +111,39 @@ localpackage is a projcet to test local package reference problem.
 ***
 
 # Maybe one solution [Reference][my_solution]
-## 1.  use package comment to specify root of local project in projcetroot
-	package main // import "#"
+## 1.  use such way to define a LocalRoot to replacing GoPath
+	LocalRoot is a <root> directory that contains such patten of sub-tree "<root>/src/vendor/" up from current path.
+	A LocalRoot has the same tree structure with GoPath and GoRoot.
+
+	Actually, a LocalRoot is a private GoPath that is accessible to sub-packages only.
+
+	This is the minimal state of a valid LocalRoot:
+		LocalRoot
+		│
+		└─src
+		    ├─vendor
+		    │  ...
+		    └─...
+
+	After build and install, it may become as:
+		LocalRoot
+		│  
+		├─bin
+		│    ...
+		├─pkg
+		│  └─windows_amd64
+		│      └─...
+		└─src
+		    │  ...     
+		    ├─vendor
+		    │  └─...
+		    └─...
 
 
-## 2. use someway to reference local package 
-	import "#/local2"
+## 2. use such way to refer local package 
+	import "#/x/y/z"
+	
+	Which means [import "x/y/z"] from LocalRoot, and never search from GoPath/GoRoot.
 
 
 [withlocal]: https://github.com/vipally/localpackage/blob/master/problem/withlocal/withlocal.go#L6
