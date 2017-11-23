@@ -21,7 +21,7 @@
 ## The problem. [Refer](https://github.com/vipally/localpackage#the-problem)
 
 ## The Go patch. [Code](https://github.com/vipally/go) [TestCode](https://github.com/vipally/localpackage/tree/master/localroot/src)
-	I have made a patch of Golang to support [import "#/foo"] style reference.
+	I have made a patch of Golang to use [import "#/foo"] style refering local packages.
 	https://github.com/vipally/go
 
 ## The solution
