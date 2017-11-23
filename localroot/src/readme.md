@@ -25,7 +25,7 @@
 	https://github.com/vipally/go
 
 ## The solution
-### 1.  use such way to define a LocalRoot to replacing GoPath/GoRoot [Examle](https://github.com/vipally/localpackage/tree/master/localroot/src)
+### 1.  use such way to define a [LocalRoot](https://github.com/vipally/go/blob/master/src/go/build/build.go#L397) to replacing GoPath/GoRoot [Examle](https://github.com/vipally/localpackage/tree/master/localroot/src)
 	LocalRoot is a <root> directory that contains such patten of sub-tree "<root>/src/vendor/" up from current path.
 	A LocalRoot has the same tree structure with GoPath and GoRoot.
 
