@@ -42,7 +42,7 @@
 	This style of import tells the compiler that it is a local package related to LocalRoot, and never search GoPath.
 	And it will be expanded as [import "x/y/z"] by compiler automatically related to LocalRoot but not GoPath.
 	
-## What is LocalRoot? [Code](https://github.com/vipally/go/blob/master/src/go/build/build.go#L393)
+## What is LocalRoot? [Code](https://github.com/vipally/go/blob/master/src/go/build/build.go#L397)
 	LocalRoot is the root of a local-only project to replace "#" in [import "#/xxx"] style.
 	LocalRoot is a <root> directory that contains such patten of sub-tree "<root>/src/vendor/" up from current path.
 	A LocalRoot has the same tree structure with GoPath and GoRoot.
