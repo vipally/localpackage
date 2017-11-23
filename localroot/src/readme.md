@@ -20,12 +20,12 @@
 
 ## The problem. [Refer](https://github.com/vipally/localpackage#the-problem)
 
-## The Go patch. [Code](https://github.com/vipally/go) [TestCode](https://github.com/vipally/localpackage/tree/master/localroot/src)
+## The Go patch. [Code](https://github.com/vipally/go) [TestCode][localroot]
 	I have made a patch of Golang to use [import "#/foo"] style refering local packages.
 	https://github.com/vipally/go
 
 ## The solution
-### 1.  use such way to define a [LocalRoot](https://github.com/vipally/go/blob/master/src/go/build/build.go#L397) to replacing GoPath/GoRoot [Examle](https://github.com/vipally/localpackage/tree/master/localroot/src)
+### 1.  use such way to define a [LocalRoot][SearchLocalRoot] to replacing GoPath/GoRoot [Examle][localroot]
 	LocalRoot is a <root> directory that contains such patten of sub-tree "<root>/src/vendor/" up from current path.
 	A LocalRoot has the same tree structure with GoPath and GoRoot.
 
@@ -79,7 +79,7 @@
 	and never search from GoPath/GoRoot.
 	It will be expanded as [import "x/y/z"] by compiler automatically related to LocalRoot but not GoPath/GoRoot.
 	
-## What is LocalRoot? [Code](https://github.com/vipally/go/blob/master/src/go/build/build.go#L397)
+## What is LocalRoot? [Code][SearchLocalRoot]
 	LocalRoot is the root of a local-only project to replace "#" in [import "#/xxx"] style.
 	LocalRoot is a <root> directory that contains such patten of sub-tree "<root>/src/vendor/" up from current path.
 	A LocalRoot has the same tree structure with GoPath and GoRoot.
@@ -178,3 +178,6 @@
 	                  └─...
 	
 [BackToTop](https://github.com/vipally/localpackage/tree/master/localroot/src#localroot)
+
+[SearchLocalRoot]: https://github.com/vipally/go/blob/master/src/go/build/build.go#L397
+[localroot]: https://github.com/vipally/localpackage/tree/master/localroot/src
