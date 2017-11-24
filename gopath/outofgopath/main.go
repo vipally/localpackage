@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"local"
+
+	"./local"
 )
 
 func main() {
