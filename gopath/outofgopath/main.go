@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	println("Gopath/src")
+	println("outofgopath")
 	fmt.Println("main    import [local]")
 	thisFilePath := local.GetThisFilepath(2)
 	fmt.Printf("Gopath is      : %s\n", local.GetGopath())
