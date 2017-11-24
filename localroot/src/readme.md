@@ -2,7 +2,7 @@
 	This is a test of localroot refer local-only packages with [import "#/foo"] style.
 
 # Manage private-only golang-projects by replacing GoPath with LocalRoot.
-# Refering local packages of golang-projects by local-style(import "#/x/y/z").
+# Refering local packages by local-style(import "#/x/y/z").
 	
 - Content
 	- [The problem](https://github.com/vipally/localpackage/tree/master/localroot/src#the-problem-refer)
