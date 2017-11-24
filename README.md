@@ -17,8 +17,8 @@ localpackage is a projcet to test local package reference problem.
 
 ***
 
-# My Solution [Reference][my_solution]
-	Use [import "#/x/y/z"] local-reference style to related to LocalRoot instead of GoPath.
+# The Solution [Reference][my_solution]
+	Use local-reference-style [import "#/x/y/z"] to related to LocalRoot instead of GoPath.
 	
 # Examples of with/without local package reference
 	Here are two examples of "hello world" main packages:
@@ -119,25 +119,25 @@ localpackage is a projcet to test local package reference problem.
 
 	This is the minimal state of a valid LocalRoot:
 		LocalRoot
-		â”‚
-		â””â”€src
-		    â”œâ”€vendor
-		    â”‚  ...
-		    â””â”€...
+		©¦
+		©¸©¤src
+		    ©À©¤vendor
+		    ©¦  ...
+		    ©¸©¤...
 
 	After build and install, it may become as:
 		LocalRoot
-		â”‚  
-		â”œâ”€bin
-		â”‚    ...
-		â”œâ”€pkg
-		â”‚  â””â”€windows_amd64
-		â”‚      â””â”€...
-		â””â”€src
-		    â”‚  ...     
-		    â”œâ”€vendor
-		    â”‚  â””â”€...
-		    â””â”€...
+		©¦  
+		©À©¤bin
+		©¦    ...
+		©À©¤pkg
+		©¦  ©¸©¤windows_amd64
+		©¦      ©¸©¤...
+		©¸©¤src
+		    ©¦  ...     
+		    ©À©¤vendor
+		    ©¦  ©¸©¤...
+		    ©¸©¤...
 
 
 ## 2. use such way to refer local package 
