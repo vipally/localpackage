@@ -8,7 +8,7 @@ import (
 
 func main() {
 	println("outofgopath")
-	fmt.Println("main    import [local]")
+	fmt.Println("main    import [./local]")
 	thisFilePath := local.GetThisFilepath(2)
 	fmt.Printf("Gopath is      : %s\n", local.GetGopath())
 	fmt.Printf("ProjectRoot is : %s\n", local.GetProjectRootpath(2))
