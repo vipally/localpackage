@@ -5,11 +5,13 @@ if [%1]==[] (
 )
 set root=%CD%
 ::echo %root%
-for /r /d %%d in (*main *src *outofgopath) do (
+for /r /d %%d in (*main *src) do (
 	echo %%d|findstr "main$ src$" > nul && (
 		cd %%d
 		echo %%d
 		go %1
+		if [%2]==[run]			echo run 
+		
 	)
 )
 ::echo %root%

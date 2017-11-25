@@ -1,1 +1,1 @@
-@call walk run
+@call walk build run
