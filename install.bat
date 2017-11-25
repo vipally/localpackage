@@ -1,2 +1,1 @@
-go install -v
-pause
+@call walk install

@@ -1,1 +1,1 @@
-go clean -i
+@call walk run
