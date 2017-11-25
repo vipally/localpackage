@@ -7,11 +7,15 @@ set root=%CD%
 ::echo %root%
 for /r /d %%d in (*main *src) do (
 	echo %%d|findstr "main$ src$" > nul && (
-		cd %%d
-		echo processing %%d ...
-		go %1
-		if [%2]==[run] (
-			call %%~nd.exe
+		if exist %%d\*.go (
+			cd %%d
+			echo ====processing %%d 
+			go %1
+			if [%2]==[run] (
+				call %%~nd.exe
+			)
+		) else (
+			echo %%d invalid 
 		)
 	)
 )
