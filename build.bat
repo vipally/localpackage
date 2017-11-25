@@ -1,1 +1,2 @@
-@call walk build	
+@call clean
+@call walk build
