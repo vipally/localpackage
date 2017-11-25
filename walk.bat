@@ -22,7 +22,7 @@ for /r /d %%d in (*main *src) do (
 ::echo %root%
 cd %root%
 
-echo press any key close...
-pause
+::echo press any key close...
+::pause
 
 :end
