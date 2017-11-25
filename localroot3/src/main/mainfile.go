@@ -2,7 +2,7 @@ package main
 
 //import "#"
 import (
-	"./local"
+	"../local"
 	//"github.com/vipally/localpackage/localroot/src/locals/local2"
 	"fmt"
 )
