@@ -9,6 +9,10 @@ for /r /d %%d in (*main *src) do (
 	echo %%d|findstr "main$ src$" > nul && (
 		if exist %%d\*.go (
 			cd %%d
+			if [%2]==[run] (
+				echo ________________________________________________________________
+			)
+			
 			echo ====processing %%d 
 			go %1
 			if [%2]==[run] (
