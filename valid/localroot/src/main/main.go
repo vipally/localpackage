@@ -1,16 +1,15 @@
 package main //import "#"
 
 import (
-	//error: import local package by global style
-	//"github.com/vipally/localpackage/localroot/src/locals/local1/local"
-	"#/locals/local1/local"
-	"#/locals/local2"
 	"fmt"
+	glocal "valid/localroot/src/locals/local1/local"
+	"#/locals/local2"
+
 	"golang.org/x/debug/macho"
 )
 
 func main() {
-	local.Show()
+	glocal.Show()
 
 	fmt.Println("**********************************************************")
 	fmt.Println("main    import [#/locals/local2]")
