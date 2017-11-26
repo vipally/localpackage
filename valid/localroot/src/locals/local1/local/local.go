@@ -1,6 +1,8 @@
 // import "#" declare this is a local package.
 // Though it doesnt have "#/foo" style imports.
-package local //import "#"
+package local
+
+//import "#"
 
 import (
 	"fmt"
@@ -16,15 +18,15 @@ var (
 )
 
 func Show() {
-	fmt.Println("**********************************************************")
-	println("package local: " + GetThisFilepath(1))
-	fmt.Println("caller info:")
-	thisFilePath := GetThisFilepath(2)
-	fmt.Printf("ThisPackagePath: %s\n", GetThisFilepath(2))
+	fmt.Println("***********************************************************************************")
+	fmt.Println("package local  : " + GetThisFilepath(1))
+	fmt.Println("caller info    :")
+	thisFilePath := GetThisFilepath(3)
+	fmt.Printf("ThisPackagePath: %s\n", GetThisFilepath(3))
 	fmt.Printf("ReleatGopath is: %s\n", GetReleatGopath(thisFilePath))
 	fmt.Printf("Gopath is      : %s\n", GetGopath())
-	fmt.Printf("ProjectRoot is : %s\n", GetProjectRootpath(2))
-	fmt.Println("**********************************************************")
+	fmt.Printf("ProjectRoot is : %s\n", GetProjectRootpath(4))
+	fmt.Println("***********************************************************************************")
 }
 
 func GetGopath() string {
