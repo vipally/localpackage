@@ -6,11 +6,6 @@ import (
 	"runtime"
 )
 
-func init() {
-	PackageMain()
-	panic("never refer this package")
-}
-
 func PackageMain() {
 	fmt.Println("in package: " + getThisFilepath(1))
 	fmt.Println("import [nothing]")
