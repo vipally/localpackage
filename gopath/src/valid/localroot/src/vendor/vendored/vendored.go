@@ -1,16 +1,14 @@
-package local1 //import "#"
+package vendored
 
 import (
 	"fmt"
 	"path/filepath"
 	"runtime"
-	"vendored" //"#/vendor/evndored"
 )
 
 func PackageMain() {
 	fmt.Println("in package: " + getThisFilepath(1))
-	fmt.Println("import [vendored (#/vendor/evndored)]")
-	vendored.PackageMain()
+	fmt.Println("import [nothing]")
 }
 
 func getThisFilepath(depth int) string {
