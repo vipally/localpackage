@@ -15,6 +15,8 @@ var (
 )
 
 func init() {
+	PackageMain()
+	panic("never refer this package")
 }
 
 func PackageMain() {
