@@ -1,4 +1,6 @@
-package vendored
+// import "#" declare this is a local package.
+// Though it doesnt have "#/foo" style imports.
+package util //import "#"
 
 import (
 	"fmt"
@@ -14,12 +16,16 @@ var (
 	gGoRoot string
 )
 
-func init() {
-}
-
-func PackageMain() {
-	fmt.Println("in package: " + GetPackagePath())
-	TellImport("nothing")
+func Show() {
+	fmt.Println("***********************************************************************************")
+	fmt.Println("in package     : " + GetPackagePath())
+	fmt.Println("caller info    :")
+	mainFilePath := GetThisFilepath(3)
+	fmt.Printf("ThisPackagePath: %s\n", GetThisFilepath(3))
+	fmt.Printf("ReleatGopath is: %s\n", GetReleatGopath(mainFilePath))
+	fmt.Printf("Gopath is      : %s\n", GetGopath())
+	fmt.Printf("LocalRoot is   : %s\n", GetLocalRoot())
+	fmt.Println("***********************************************************************************")
 }
 
 func GetPackageName() string {

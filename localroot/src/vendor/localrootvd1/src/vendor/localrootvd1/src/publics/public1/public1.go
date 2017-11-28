@@ -1,4 +1,4 @@
-package vendored
+package public1
 
 import (
 	"fmt"
@@ -7,6 +7,7 @@ import (
 	"path/filepath"
 	"runtime"
 	"strings"
+	"vendored" //"#/vendor/evndored"
 )
 
 var (
@@ -14,12 +15,11 @@ var (
 	gGoRoot string
 )
 
-func init() {
-}
-
 func PackageMain() {
 	fmt.Println("in package: " + GetPackagePath())
-	TellImport("nothing")
+	TellImport("vendored (vendor tree)")
+	AssertRelatedPath(GetLocalRoot(), "src/vendor/vendored", vendored.GetPackagePath())
+	vendored.PackageMain()
 }
 
 func GetPackageName() string {

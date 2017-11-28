@@ -1,6 +1,6 @@
-package vendored
-
+package local2 //import "#"
 import (
+	"#/locals/local1"
 	"fmt"
 	"go/build"
 	"os"
@@ -14,12 +14,11 @@ var (
 	gGoRoot string
 )
 
-func init() {
-}
-
 func PackageMain() {
 	fmt.Println("in package: " + GetPackagePath())
-	TellImport("nothing")
+	TellImport("#/locals/local1")
+	local1.AssertRelatedLocalRoot("locals/local1")
+	local1.PackageMain()
 }
 
 func GetPackageName() string {
