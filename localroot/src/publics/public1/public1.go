@@ -3,6 +3,7 @@ package public1
 import (
 	"fmt"
 	"go/build"
+	vendored2 "localrootvd1/src/locals/local2"
 	"os"
 	"path/filepath"
 	"runtime"
@@ -17,8 +18,13 @@ var (
 
 func PackageMain() {
 	fmt.Println("in package: " + GetPackagePath())
-	TellImport("vendored (#/vendor/evndored)")
+	TellImport("vendored (vendor tree)")
+	AssertRelatedPath(GetLocalRoot(), "src/vendor/vendored", vendored.GetPackagePath())
 	vendored.PackageMain()
+	TellImport("localrootvd1/src/locals/local2 (vendor tree)")
+	AssertRelatedPath(GetLocalRoot(), "localrootvd1/src/locals/local2", vendored.GetPackagePath())
+	vendored2.PackageMain()
+
 }
 
 func GetPackageName() string {
