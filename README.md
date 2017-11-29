@@ -139,12 +139,10 @@ localpackage is a projcet to test local package reference problem.
 		    ?  ??...
 		    ??...
 
-
 ## 2. use such way to refer local package 
 	import "#/x/y/z"
 	
 	Which means [import "x/y/z"] from LocalRoot, and never search from GoPath/GoRoot.
-
 
 [withlocal]: https://github.com/vipally/localpackage/blob/master/problem/withlocal/withlocal.go#L6
 [withoutlocal]: https://github.com/vipally/localpackage/blob/master/problem/withoutlocal/withoutlocal.go#L9
