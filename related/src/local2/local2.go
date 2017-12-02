@@ -18,8 +18,8 @@ func PackageMain() {
 
 func getThisFilepath(depth int) string {
 	thisFile, _ := fileLine(depth)
-	thisFileath := filepath.Dir(thisFile)
-	return thisFileath
+	thisFilePath := filepath.Dir(thisFile)
+	return thisFilePath
 }
 
 //the caller's file/line info

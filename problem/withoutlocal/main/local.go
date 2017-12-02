@@ -31,8 +31,8 @@ func GetProjectRootpath(depth int) string {
 
 func GetThisFilepath(depth int) string {
 	thisFile, _ := FileLine(depth)
-	thisFileath := filepath.Dir(thisFile)
-	return formatPath(thisFileath)
+	thisFilePath := filepath.Dir(thisFile)
+	return formatPath(thisFilePath)
 }
 
 func GetReleatGopath(s string) string {

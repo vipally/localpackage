@@ -91,8 +91,8 @@ func GetLocalRootOfCaller(depth int) string {
 
 func GetThisFilepath(depth int) string {
 	thisFile, _ := FileLine(depth)
-	thisFileath := filepath.Dir(thisFile)
-	return thisFileath
+	thisFilePath := filepath.Dir(thisFile)
+	return thisFilePath
 }
 
 func GetReleatGopath(s string) string {
