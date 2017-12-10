@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	glocal "valid/localroot/src/locals/local1/local"
+	glocal "localroot1/src/util"
 
 	"./local2"
 )
