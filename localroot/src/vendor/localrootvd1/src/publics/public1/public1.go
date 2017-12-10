@@ -3,12 +3,12 @@ package public1
 import (
 	"fmt"
 	"go/build"
-	vendored2 "localrootvd1/src/locals/local2"
+	vendored2 "#/localrootvd1/src/locals/local2"
 	"os"
 	"path/filepath"
 	"runtime"
 	"strings"
-	"vendored" //"#/vendor/evndored"
+	"#/vendored" //"#/vendor/evndored"
 )
 
 var (

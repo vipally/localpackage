@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"runtime"
 	"strings"
-	"vendored" //"#/vendor/evndored"
+	"#/vendored" //"#/vendor/evndored"
 )
 
 var (
