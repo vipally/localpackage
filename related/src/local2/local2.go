@@ -1,6 +1,6 @@
 package local2
 
-//import "#"
+
 
 import (
 	"fmt"

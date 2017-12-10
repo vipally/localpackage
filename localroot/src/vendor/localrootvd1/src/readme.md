@@ -63,7 +63,7 @@
 ### 1.With package comment [import "#"] [Code](https://github.com/vipally/localpackage/blob/master/localroot/src/locals/local1/local/local.go#L3)
 	// [import "#"] declares this is a local-only package.
 	// Though it doesnt have [import "#/foo"] style imports.
-	package local //import "#"
+	package local 
 ### 2.With any import with [import "#/foo"] style  [Code](https://github.com/vipally/localpackage/blob/master/localroot/src/locals/local2/local2.go#L5)
 	import "#/locals/local1"
 

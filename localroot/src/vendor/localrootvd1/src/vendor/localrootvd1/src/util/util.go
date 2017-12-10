@@ -1,6 +1,6 @@
 // import "#" declare this is a local package.
 // Though it doesnt have "#/foo" style imports.
-package util //import "#"
+package util 
 
 import (
 	"fmt"

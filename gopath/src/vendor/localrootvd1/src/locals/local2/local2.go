@@ -1,4 +1,4 @@
-package local2 //import "#"
+package local2 
 import (
 	"#/locals/local1"
 	"fmt"

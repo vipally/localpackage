@@ -1,9 +1,9 @@
-package local //import "#"
+package local 
 
 import (
 	"fmt"
 )
 
 func PackageMain() {
-	fmt.Println(`local with //import "#" declaration`)
+	fmt.Println(`local with  declaration`)
 }

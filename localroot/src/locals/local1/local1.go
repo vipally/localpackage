@@ -1,4 +1,4 @@
-package local1 //import "#"
+package local1 
 
 import (
 	"#/publics/public1"
