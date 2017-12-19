@@ -3,6 +3,7 @@ if [%1]==[] (
 	echo must use as "walk gocmd"
 	goto :end
 )
+set GOPATH=%CD%\gopath\;%GOPATH%
 set root=%CD%
 ::echo %root%
 for /r /d %%d in (*main *src) do (
