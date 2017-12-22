@@ -34,7 +34,7 @@ localpackage is a projcet to test local package reference problem.
 	Just like: all.Printf/all.OpenFile/all.GOROOT/...
 	Does this go team recommended?
 	
-	We must explicit followed priorty of go dependency package find process:
+	We must explicit followed priority of go dependency package find process:
 	<ProjectRoot>: with highest-priorty path to find local packages.
 	<Vendor>     : with second-priorty path to find explicit-version of local-referenced the third-party packages.
 	<GoRoot>     : with third-priorty path to find standard packages.
