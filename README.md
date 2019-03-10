@@ -17,8 +17,8 @@ localpackage is a projcet to test local package reference problem.
 
 ***
 
-# My Solution [Reference][my_solution]
-	Use [import "#/x/y/z"] local-reference style to related to LocalRoot instead of GoPath.
+# The Solution [Reference][my_solution]
+	Use local-reference-style [import "#/x/y/z"] to related to LocalRoot instead of GoPath.
 	
 # Examples of with/without local package reference
 	Here are two examples of "hello world" main packages:
@@ -34,7 +34,7 @@ localpackage is a projcet to test local package reference problem.
 	Just like: all.Printf/all.OpenFile/all.GOROOT/...
 	Does this go team recommended?
 	
-	We must explicit followed priorty of go dependency package find process:
+	We must explicit followed priority of go dependency package find process:
 	<ProjectRoot>: with highest-priorty path to find local packages.
 	<Vendor>     : with second-priorty path to find explicit-version of local-referenced the third-party packages.
 	<GoRoot>     : with third-priorty path to find standard packages.
@@ -124,7 +124,7 @@ localpackage is a projcet to test local package reference problem.
 		    ├─vendor
 		    │  ...
 		    └─...
-
+	
 	After build and install, it may become as:
 		LocalRoot
 		│  
@@ -139,12 +139,10 @@ localpackage is a projcet to test local package reference problem.
 		    │  └─...
 		    └─...
 
-
 ## 2. use such way to refer local package 
 	import "#/x/y/z"
 	
 	Which means [import "x/y/z"] from LocalRoot, and never search from GoPath/GoRoot.
-
 
 [withlocal]: https://github.com/vipally/localpackage/blob/master/problem/withlocal/withlocal.go#L6
 [withoutlocal]: https://github.com/vipally/localpackage/blob/master/problem/withoutlocal/withoutlocal.go#L9

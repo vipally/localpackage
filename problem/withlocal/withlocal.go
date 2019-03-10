@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/vipally/localpackage/problem/local"
+	"problem/local"
 )
 
 // With local package import.
